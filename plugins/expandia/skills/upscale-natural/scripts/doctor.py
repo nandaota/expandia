@@ -32,11 +32,12 @@ def recommend(memory,logical,physical=None):
     if gb<4: tile,cap=64,8_000_000
     elif gb<8: tile,cap=96,16_000_000
     elif gb<16: tile,cap=160,32_000_000
-    else: tile,cap=256,32_000_000
+    elif gb<32: tile,cap=256,32_000_000
+    else: tile,cap=256,64_000_000
     cores=physical or max(1,logical//2)
     threads=min(4,max(1,cores-1 if cores>2 else cores))
     return {'backend':'ncnn-cpu','threads':threads,'tile':tile,'context':32,
-            'max_output_pixels':cap,'timeout_per_image_seconds':3600,
+            'max_output_pixels':cap,'timeout_per_image_seconds':10800 if cap>32_000_000 else 3600,
             'default_scale':4,'default_ppi':300,'default_strength':20}
 
 def detect():

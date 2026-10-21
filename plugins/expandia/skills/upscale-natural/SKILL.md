@@ -52,7 +52,7 @@ já são escaláveis. O lote é sequencial e retoma resultados verificados.
 
 `plan` calcula dimensões e verifica limites antes de processar. O limite
 de saída e o tamanho dos blocos são ajustados à RAM detectada, com teto
-de 32 MP. A proporção e o fator solicitados nunca são reduzidos para
+de 64 MP para computadores com pelo menos 32 GiB de RAM (até três horas por imagem). A proporção e o fator solicitados nunca são reduzidos para
 caber: se excederem os limites, explique e proponha 2× ou uma imagem menor.
 PPI é metadado de impressão, não fator de ampliação.
 

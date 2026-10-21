@@ -10,6 +10,8 @@ class Profiles(unittest.TestCase):
         self.assertEqual(doctor.recommend(2*1024**3,4)['max_output_pixels'],8_000_000)
         self.assertEqual(doctor.recommend(4*1024**3,4)['max_output_pixels'],16_000_000)
         self.assertEqual(doctor.recommend(16*1024**3,32)['max_output_pixels'],32_000_000)
+        self.assertEqual(doctor.recommend(32*1024**3,4)['max_output_pixels'],64_000_000)
+        self.assertEqual(doctor.recommend(32*1024**3,4)['timeout_per_image_seconds'],10800)
         self.assertEqual(doctor.recommend(None,1)['threads'],1)
 
     def test_intel_mac_diagnostic(self):

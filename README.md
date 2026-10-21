@@ -10,14 +10,14 @@ influência, não garante preservação exata de detalhes.
 
 No aplicativo ChatGPT, em uma conversa do **modo Codex local**, peça:
 
-> Baixe o repositório privado https://github.com/nandaota/expandia, leia
+> Baixe o repositório público https://github.com/nandaota/expandia, leia
 > AGENTS.md e configure o Expandia neste computador executando iniciar.py.
 > Faça o diagnóstico automático, prepare as dependências, verifique o
 > modelo, rode o teste e o benchmark e me diga quando estiver pronto.
 
-O Codex deve clonar ou baixar o repositório com sua conta GitHub já
-autenticada. Se a sessão não tiver acesso ao repositório privado, será
-necessário conectar sua conta. Não são necessárias chaves de API de IA.
+O repositório é público: qualquer pessoa pode clonar ou baixar o ZIP, sem
+precisar de convite ou autenticação no GitHub. Não são necessárias chaves
+de API de IA. Cada computador cria seu próprio ambiente local.
 
 Depois da configuração, peça, por exemplo:
 
@@ -60,8 +60,8 @@ sistema antigo ou políticas da máquina podem exigir intervenção. GPU/Metal
 não são ativados automaticamente nesta versão.
 
 Requisitos: **Python 3.9–3.12, macOS 11+ ou Windows 10/11 de 64 bits**.
-Mac Intel e Apple Silicon têm pacotes NCNN próprios. Um iMac 2017 com macOS
-compatível é um alvo previsto, mas esta versão ainda precisa ser testada nele.
+Mac Intel e Apple Silicon têm pacotes NCNN próprios. Instalação, inferência de teste e benchmark foram verificados também em
+macOS Intel. O tempo de processamento depende do computador.
 Internet é usada para obter código, bibliotecas e modelo na configuração.
 Após instalada, a ampliação é local. O chat continua sujeito ao seu plano.
 
@@ -86,8 +86,8 @@ próprio ambiente em `runtime/`. Um ZIP deste repositório também serve.
 PNG, JPG, TIFF e WebP estáticos, RGB/cinza de 8 bits; transparência, CMYK,
 16 bits e arquivos multipágina ainda não são aceitos. Vetores SVG e fontes
 não entram em lotes de upscale. Saída PNG, 2× ou 4×, 150 ou 300 PPI.
-20% por padrão, 30% quando solicitado. Teto absoluto de 32 MP, reduzido
-em computadores com menos RAM. Não reduz automaticamente a escala pedida.
+20% por padrão, 30% quando solicitado. Teto absoluto de 64 MP em computadores com 32 GiB de RAM ou mais, reduzido
+em computadores com menos RAM. Perfis de 64 MP permitem até três horas por imagem. Não reduz automaticamente a escala pedida.
 
 Saídas usam o final `_expandia4x_300ppi_RE20.png` (ou configuração equivalente).
 Lotes são sequenciais, com relatório `expandia-lote.json` e retomada por arquivo.

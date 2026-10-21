@@ -10,7 +10,7 @@ def libraries():
     import numpy as np
     import cv2
     from PIL import Image,ImageOps
-    Image.MAX_IMAGE_PIXELS=32_000_000
+    Image.MAX_IMAGE_PIXELS=64_000_000
     warnings.simplefilter('error',Image.DecompressionBombWarning)
     cv2.setNumThreads(1)
 
