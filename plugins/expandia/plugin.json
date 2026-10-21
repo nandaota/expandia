@@ -1,0 +1,8 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "expandia",
+  "version": "0.1.0",
+  "description": "Upscale pessoal local com aparência natural, diagnóstico automático e mistura Real-ESRGAN/Lanczos de 20% ou 30%.",
+  "repository": "https://github.com/nandaota/expandia",
+  "extensions": {"com.openai": {"requires_local_executor": true}}
+}

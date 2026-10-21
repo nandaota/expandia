@@ -1,0 +1,17 @@
+**/runtime/
+**/__pycache__/
+*.pyc
+.DS_Store
+*.log
+*.tmp
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.webp
+*.bin
+*.param
+*.zip
+*.pth
+*.pb

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Expandia"
+  short_description: "Upscale natural local, com padrão de IA em 20%"
+  default_prompt: "Use $upscale-natural para diagnosticar este computador e ampliar minhas imagens com o padrão Expandia de 20%."
